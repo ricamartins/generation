@@ -4,7 +4,7 @@ programa
 	funcao inicio()
 	{
 		inteiro duracaoEmSegundos, horas, minutos, segundos
-		
+
 		escreva("Digite o tempo de duração do evento: ")
 		leia(duracaoEmSegundos)
 
@@ -24,7 +24,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 330; 
+ * @POSICAO-CURSOR = 87; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
