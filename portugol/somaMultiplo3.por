@@ -3,9 +3,10 @@ programa
 	
 	funcao inicio()
 	{
+		const inteiro LIMITE = 498
 		inteiro soma = 0
 		
-		para (inteiro numero = 3; numero <= 498; numero += 3) {
+		para (inteiro numero = 3; numero <= LIMITE; numero += 6) {
 			soma += numero
 		}
 		
@@ -17,7 +18,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 176; 
+ * @POSICAO-CURSOR = 207; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
