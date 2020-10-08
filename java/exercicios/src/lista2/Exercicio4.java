@@ -33,7 +33,7 @@ public class Exercicio4 {
 		int[][][] pessoas = new int[3][3][3];
 		
 		//150
-		for (int i = 0; i < 150; i ++) {
+		int i = 0; while (i < 150) {
 			
 			System.out.println("Informe a idade");
 			idade = scanner.nextInt();
@@ -48,6 +48,8 @@ public class Exercicio4 {
 			personalidade = scanner.nextInt() - 1; //converter para indice
 			
 			pessoas[faixaEtaria][genero][personalidade]++;
+			
+			i++;
 		}
 		
 		//passe para pegaDados os valores de faixa etária, gênero e personalidade nesta ordem
