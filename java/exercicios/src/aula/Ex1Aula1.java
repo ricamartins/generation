@@ -1,8 +1,8 @@
-package portugol;
+package aula;
 
 import java.util.Scanner;
 
-public class ExAula1 {
+public class Ex1Aula1 {
 
 	public static void main(String[] args) {
 		Scanner tec = new Scanner(System.in);
@@ -10,7 +10,6 @@ public class ExAula1 {
 		String nome;
 		int anoNascimento, idade;
 		char chefeFamilia, sexo;
-		int valor = -4;
 		
 		System.out.print("Digite seu nome: ");
 		nome = tec.next();
