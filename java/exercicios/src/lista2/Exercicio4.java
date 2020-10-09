@@ -29,11 +29,12 @@ public class Exercicio4 {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		final int LIMITE = 150;
 		int idade, faixaEtaria, genero, personalidade;
 		int[][][] pessoas = new int[3][3][3];
 		
 		//150
-		int i = 0; while (i < 150) {
+		int i = 0; while (i < LIMITE) {
 			
 			System.out.println("Informe a idade");
 			idade = scanner.nextInt();
