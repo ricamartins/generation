@@ -15,7 +15,7 @@ public class Exercicio2 {
 			System.out.print("Digite um número inteiro: ");
 			numero = scanner.nextInt();
 			
-			if (numero % 2 == 0) {
+			if (numero % 3 == 0) {
 				pares[indicePar++] = numero;
 			} else {
 				impares[indiceImpar++] = numero;
