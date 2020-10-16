@@ -5,7 +5,7 @@ public class FornecedorTeste {
 	public static void main(String[] args) {
 		final int NUMERO_TESTE = 6;
 		Fornecedor fornecedores[] = new Fornecedor[NUMERO_TESTE];
-
+		
 		fornecedores[0] = new Fornecedor("Rogério");
 		fornecedores[1] = new Fornecedor("Alexandre", "Rua Juscelino Dias, 276");
 		fornecedores[2] = new Fornecedor("Lilian", "Rua das Palmeiras, 34", "(11)3452-1739");
