@@ -56,4 +56,8 @@ public class Pessoa {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+	
+	public double obterSaldo() {
+		return 0.0;
+	}
 }

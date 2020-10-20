@@ -54,6 +54,7 @@ public class Fornecedor extends Pessoa {
 		this.valorDivida = valorDivida;
 	}
 	
+	@Override
 	public double obterSaldo() {
 		return this.valorCredito - this.valorDivida;
 	}
