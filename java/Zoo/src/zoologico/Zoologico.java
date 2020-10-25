@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import animais.*;
+import Index.Bio;
 
 public class Zoologico {
 
@@ -16,15 +17,23 @@ public class Zoologico {
 	
 	public static String distancia[] = {"", "", "", "", "", "", "", "", ""};
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
+		
+		boolean voltar = true;
 		
 		do {
-		
+			
+			imprimirLetreiro();
 			animalIndice = menuPrincipal();
 			
 			if (animalIndice == 6) break;
 			
-		} while (visitarAnimal());
+			if (animalIndice == 5)
+				Bio.main(args);
+			else
+				voltar = visitarAnimal();
+			
+		} while (voltar);
 		
 		scanner.close();
 	}
@@ -39,6 +48,17 @@ public class Zoologico {
 		return animais;
 	}
 	
+	public static void imprimirLetreiro() {
+		
+		System.out.println(" _____                      _             _           ");
+		System.out.println("/ _  / ___   ___           | | ___   __ _(_) ___ ___  ");
+		System.out.println("\\// / / _ \\ / _ \\   _____  | |/ _ \\ / _` | |/ __/ _ \\ ");
+		System.out.println(" / //\\ (_) | (_) | |_____| | | (_) | (_| | | (_| (_) |");
+		System.out.println("/____/\\___/ \\___/          |_|\\___/ \\__, |_|\\___\\___/ ");
+		System.out.println("                                    |___/            ");
+		
+	}
+	
 	public static byte menuPrincipal() {
 		
 		byte opcao;
@@ -49,7 +69,8 @@ public class Zoologico {
 			System.out.println("3 - Visitar ema");
 			System.out.println("4 - Visitar sapo");
 			System.out.println("5 - Visitar tubarão");
-			System.out.println("6 - Ir embora");
+			System.out.println("6 - Biodex");
+			System.out.println("7 - Ir embora");
 			try {
 				opcao = scanner.nextByte();				
 			} catch (InputMismatchException e) {
@@ -58,10 +79,11 @@ public class Zoologico {
 				opcao = 0;
 			}
 			
-		} while (opcao < 1 || opcao > 6);
+		} while (opcao < 1 || opcao > 7);
 		
 		
-		return (opcao == 6) ? 6 : --opcao;
+		//return (opcao == 7) ? 7 : --opcao;
+		return --opcao;
 	}
 	
 	public static boolean visitarAnimal() {
@@ -75,36 +97,39 @@ public class Zoologico {
 		
 		do {
 			
-			
 			imprimirTela();
-			System.out.println(mensagem);
+			System.out.println(mensagem + "\n");
 			acao = menuAnimal();
 			
 			switch(acao) {
 				case 1:
-					mensagem = animais[animalIndice].comer(random.nextDouble());
+					mensagem = "Você: tó \n" + animais[animalIndice].getNome() + ": " + animais[animalIndice].comer(random.nextDouble());
 					break;
 				case 2:
 					barulho = random.nextBoolean();
 					if (barulho)
-						mensagem = animais[animalIndice].movimentar("confusão");
+						mensagem = "Você: ô, bixinho! vem, vem! \n" + animais[animalIndice].getNome() + ": " + animais[animalIndice].movimentar("confusão");
 					else
-						mensagem = animais[animalIndice].movimentar("movimentação");
+						mensagem = "Você: ô, bixinho! vem, vem! \n" + animais[animalIndice].getNome() + ": " + animais[animalIndice].movimentar("movimentação");
 					break;
 				case 3:
-					mensagem = animais[animalIndice].movimentar("atenção");
+					mensagem = "Você: vem cá, " + animais[animalIndice].getNome() + "!\n" + animais[animalIndice].getNome() + ": " + animais[animalIndice].movimentar("atenção");
 					break;
 				case 4:
 					limparTela();
 					return true; //Visitar outro animal
 				case 5:
+					mensagem = "Zoo-lógico: Já estamos conversando com os criadores do Biodex!";
+					break;
+				case 6:
+					mensagem = "Zoo-lógico: Processo de adoção indisponível. Estamos conversando com as criadoras do AUtonoMIA";
+					break;
+				case 7:
 					limparTela();
 					return false; //Ir embora
-				case 6:
-					mensagem = animais[animalIndice].movimentar("jair");
+				case 8:
+					mensagem = "Você: tó, cloroquina! \n" + animais[animalIndice].getNome() + ": " + animais[animalIndice].movimentar("jair");
 					break;
-				default:
-					mensagem = "Não dá pra fazer isso, não";
 			}
 			
 			dormiu = animais[animalIndice].dormir();
@@ -159,14 +184,17 @@ public class Zoologico {
 	public static byte menuAnimal() {
 		byte acao;
 		do {
-			System.out.println("Para o que deseja fazer?");
+			System.out.println("Que que cê quer fazer?");
 			System.out.println("1 - Oferecer comida");
 			System.out.println("2 - Acenar");
 			System.out.println("3 - Chamar pelo nome");
 			System.out.println("4 - Visitar outro animal");
-			System.out.println("5 - Ir embora");
+			System.out.println("5 - Acessar Biodex de " + animais[animalIndice].getTipo() + " (em breve!)");
+			System.out.println("6 - Adotar " + animais[animalIndice].getNome() + " com o AUtonoMIA");
+			System.out.println("7 - Ir embora");
 			if (animais[animalIndice].getTipo().equals("Ema"))
-				System.out.println("6 - Oferecer cloroquina");
+				System.out.println("8 - Oferecer cloroquina");
+				
 			try {
 				acao = scanner.nextByte();
 			} catch (InputMismatchException e) {
@@ -175,7 +203,16 @@ public class Zoologico {
 				acao = 0;
 			}
 			
-		} while (acao < 1 || acao > 6);
+			if (acao < 1 || acao > 8) {
+				limparTela();
+				imprimirTela();
+				System.out.println("Zelador: ô maldade, não faz isso com o bixinho, não!");
+			}
+			
+			if (!animais[animalIndice].getTipo().equals("Ema") && acao == 8)
+				acao = 0;
+			
+		} while (acao < 1 || acao > 8);
 		
 		return acao;
 	}

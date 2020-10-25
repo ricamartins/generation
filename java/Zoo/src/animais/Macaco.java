@@ -35,19 +35,19 @@ public class Macaco extends Animal {
 				this.peso -= this.peso * 0.02;
 				this.cansaco++;
 				this.apetite++;
-				this.distancia = (this.getDistancia() == 0) ? 0 : this.getDistancia() - 5;
+				this.distancia = (this.getDistancia() == 0) ? 0 : this.getDistancia() - 10;
 				return this.emitirSom("alegre") + " *macaqueando em sua direção*";
 			} else if (momento.equals("confusão")) {
 				this.peso -= this.peso * 0.02;
 				this.cansaco++;
 				this.apetite++;
-				this.distancia = (this.getDistancia() > 20) ? 0 : this.getDistancia() + 5;
+				this.distancia = (this.getDistancia() > 40) ? 0 : this.getDistancia() + 10;
 				return this.emitirSom("triste") + " *se escondendo nas árvores*";
 			} else {
 				this.peso -= this.peso * 0.02;
 				this.cansaco++;
 				this.apetite++;
-				this.distancia = (this.getDistancia() > 20) ? 0 : this.getDistancia() + 5;
+				this.distancia = (this.getDistancia() > 40) ? 0 : this.getDistancia() + 10;
 				return this.emitirSom("normal") + " *pulando de galho em galho*";
 			}
 		}

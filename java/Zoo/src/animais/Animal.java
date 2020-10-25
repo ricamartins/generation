@@ -56,7 +56,8 @@ public abstract class Animal {
 	public int getDistancia() {
 		return distancia;
 	}
-
+	public abstract String emitirSom(String som);
+	/*
 	public String emitirSom(String som) {
 		if (som.equals("alegre")) {
 			return "*som alegre!!*";
@@ -68,7 +69,7 @@ public abstract class Animal {
 			return som;
 		}
 	}
-	
+	*/
 	public void ouvir(String som) {
 		if (som.equals(this.nome)) {
 			this.movimentar("atenção");
@@ -78,7 +79,8 @@ public abstract class Animal {
 			this.movimentar("");
 		}
 	}
-	
+	public abstract String movimentar(String momento);
+	/*
 	public String movimentar(String momento) {
 		if (this.sono()) {
 			return "yaawwn *cansado*";
@@ -107,6 +109,7 @@ public abstract class Animal {
 			}
 		}
 	}
+	*/
 	
 	public String comer(double comida) {
 		if (this.fome()) {

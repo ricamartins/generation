@@ -49,19 +49,19 @@ public class Ema extends Animal{
 				this.peso -= this.peso * 0.02;
 				this.cansaco++;
 				this.apetite++;
-				this.distancia = (this.getDistancia() == 0) ? 0 : this.getDistancia() - 5;
+				this.distancia = (this.getDistancia() == 0) ? 0 : this.getDistancia() - 10;
 				return this.emitirSom("alegre") + " *se aproximando*";
 			} else if (momento.equals("confusão")) {
 				this.peso -= this.peso * 0.02;
 				this.cansaco++;
 				this.apetite++;
-				this.distancia = (this.getDistancia() > 20) ? 0 : this.getDistancia() + 5;
+				this.distancia = (this.getDistancia() > 40) ? 0 : this.getDistancia() + 10;
 				return this.emitirSom("triste") + " *se afastando*";
 			} else if (momento.equals("jair")) {
 				this.peso -= this.peso * 0.02;
 				this.cansaco++;
 				this.apetite++;
-				this.distancia = (this.getDistancia() > 20) ? 0 : this.getDistancia() + 5;
+				this.distancia = (this.getDistancia() > 40) ? 0 : this.getDistancia() + 10;
 				return this.emitirSom("triste") + " sai fora tio todo dia isso";
 			} else {
 				this.peso -= this.peso * 0.02;
