@@ -22,3 +22,13 @@ select * from tb_funcionarios where salario > 2000;
 select * from tb_funcionarios where salario < 2000;
 
 update tb_funcionarios set salario = 2043.21 where nome like "Juliana";
+
+create table tb_colaboradores (
+	id int auto_increment primary key,
+    qtd int auto_increment,
+    nome varchar(20) not null,
+    cpf varchar(14) not null unique,
+    telefone varchar(14) not null,
+    sexo enum("M", "F", "O"),
+    salario decimal(7,2)
+);
