@@ -5,7 +5,7 @@ use db_RH2;
 #cria tabela cargos
 create table tb_cargos (
 	id int not null auto_increment,
-    nome varchar(30) not null,
+    cargo varchar(30) not null,
     andar smallint not null,
     primary key (id)
 ); 
@@ -60,6 +60,9 @@ select * from tb_funcionarios
 where nome like "C%";
 
 #junta as duas tabelas com nome, cargo e salário, apenas para teste
-select tb_funcionarios.nome as nome, tb_cargos.nome as cargo, salario from tb_funcionarios
+select tb_funcionarios.nome as nome, tb_cargos.cargo as cargo, salario from tb_funcionarios
 inner join tb_cargos
-on cargo = tb_cargos.id;
+on tb_funcionarios.cargo = tb_cargos.id;
+
+select * from tb_cargos;
+ALTER TABLE tb_cargos change nome cargo varchar(30);
