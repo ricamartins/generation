@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import animais.*;
-import Index.Bio;
+//import Index.Bio;
 
 public class Zoologico {
 
@@ -29,7 +29,8 @@ public class Zoologico {
 			if (animalIndice == 6) break;
 			
 			if (animalIndice == 5)
-				Bio.main(args);
+				System.out.println("Serviço indisponível no momento");
+				//Bio.main(args);
 			else
 				voltar = visitarAnimal();
 			
