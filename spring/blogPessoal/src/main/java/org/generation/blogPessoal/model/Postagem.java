@@ -2,6 +2,7 @@ package org.generation.blogPessoal.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name="tb_postagens")
@@ -29,13 +32,11 @@ public class Postagem {
 	@Size(min=10, max=500)
 	private String texto;
 	
+	@Column(columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date data = new java.sql.Date(System.currentTimeMillis());
-
-//	@PrePersist
-//	private void onCreate() {
-//	    data = new Date();
-//	}
+	@CreationTimestamp
+	private Date data;
+	// = new java.sql.Date(System.currentTimeMillis())
 	
 	public long getId() {
 		return id;
