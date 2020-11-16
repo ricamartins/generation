@@ -9,7 +9,13 @@
 			"name": "get_postagens",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/postagens",
 					"protocol": "http",
@@ -28,7 +34,13 @@
 			"name": "get_postagem_by_id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/postagens/1",
 					"protocol": "http",
@@ -48,7 +60,13 @@
 			"name": "get_postagens_by_titulo",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/postagens/titulo/titulo",
 					"protocol": "http",
@@ -69,7 +87,13 @@
 			"name": "post_postagem",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"titulo\": \"Informática\",\r\n    \"texto\": \"Informática também faz parte da área de tecnologia\",\r\n    \"tema\": {\r\n        \"id\": 2\r\n    }\r\n}",
@@ -97,7 +121,13 @@
 			"name": "update_postagem",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"titulo\": \"Aula de API Rest\",\r\n    \"texto\": \"Estou aprendendo muito\"\r\n}",
@@ -125,7 +155,13 @@
 			"name": "delete_postagem_by_id",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/postagens/1",
 					"protocol": "http",
@@ -145,7 +181,13 @@
 			"name": "get_temas",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/tema",
 					"protocol": "http",
@@ -164,7 +206,13 @@
 			"name": "get_tema_by_id",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/tema/1",
 					"protocol": "http",
@@ -184,7 +232,13 @@
 			"name": "get_temas_by_descricao",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/tema/nome/nome",
 					"protocol": "http",
@@ -205,7 +259,13 @@
 			"name": "post_tema",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"descricao\": \"entretenimento\"\r\n}",
@@ -233,7 +293,13 @@
 			"name": "update_tema",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"id\": 1,\r\n    \"descricao\": \"esportes radicais\"\r\n}",
@@ -261,7 +327,13 @@
 			"name": "delete_tema_by_id",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic key_token",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/tema/3",
 					"protocol": "http",
@@ -272,6 +344,67 @@
 					"path": [
 						"tema",
 						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrar_usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Marcelo Barboza\",\r\n    \"usuario\": \"Marcelo 125\",\r\n    \"senha\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logar_usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"Marcelo 125\",\r\n    \"senha\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/logar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"logar"
 					]
 				}
 			},

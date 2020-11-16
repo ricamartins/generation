@@ -35,6 +35,9 @@ public class Postagem {
 	@Size(min=10, max=500)
 	private String texto;
 	
+	@NotNull
+	private int ano;
+	
 	@Column(columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	@Temporal(TemporalType.TIMESTAMP)
 	@CreationTimestamp
@@ -67,6 +70,14 @@ public class Postagem {
 
 	public void setTexto(String texto) {
 		this.texto = texto;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
 	}
 
 	public Date getData() {

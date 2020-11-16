@@ -41,6 +41,31 @@ public class PostagemController {
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
+	@GetMapping("/maior")
+	public ResponseEntity<List<Postagem>> getAllMaior() {
+		return ResponseEntity.ok(repository.findAllMaior());
+	}
+	
+	@GetMapping("/ordem/desc")
+	public ResponseEntity<List<Postagem>> getAnosDesc() {
+		return ResponseEntity.ok(repository.anosDesc());
+	}
+	
+	@GetMapping("/ordem/asc")
+	public ResponseEntity<List<Postagem>> getAnosAsc() {
+		return ResponseEntity.ok(repository.anosAsc());
+	}
+	
+	@GetMapping("/intervalo")
+	public ResponseEntity<List<Postagem>> getAnosIntervalos() {
+		return ResponseEntity.ok(repository.anosIntervalo());
+	}
+	
+	@GetMapping("/ano/{ano}")
+	public ResponseEntity<List<Postagem>> getPostagensByAno(@PathVariable int ano) {
+		return ResponseEntity.ok(repository.postagensPorAno(ano));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Postagem> post(@RequestBody Postagem postagem) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));
