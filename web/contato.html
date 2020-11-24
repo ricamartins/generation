@@ -21,15 +21,18 @@
         <div>
             <form action="" id="form-contato">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome">
-        
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
+
                 <label for="email">Email:</label>
-                <input type="email" id="email">
-        
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
+
                 <label for="assunto">Assunto:</label>
-                <textarea name="assunto" id="assunto" cols="30" rows="15"></textarea>
-        
-                <button>Enviar</button>
+                <textarea name="assunto" id="assunto" cols="30" rows="15" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
+
+                <button onclick="enviar()">Enviar</button>
             </form>
         </div>
 
@@ -37,7 +40,7 @@
             <p>Igreja Católica no meio do nada</p>
             <p>Fischenthal, Suiça</p>
         
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10813.804306990392!2d8.9292913!3d47.3445907!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa88d5d54eb3317e5!2sKatholische%20Kirche%20St.%20Gallus!5e0!3m2!1spt-BR!2sbr!4v1605897057951!5m2!1spt-BR!2sbr" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10813.804306990392!2d8.9292913!3d47.3445907!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa88d5d54eb3317e5!2sKatholische%20Kirche%20St.%20Gallus!5e0!3m2!1spt-BR!2sbr!4v1605897057951!5m2!1spt-BR!2sbr" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="mapa" onmousemove="mapaZoom()" onmouseout="mapaNormal()"></iframe>
         </div>
     </div>
 
@@ -60,5 +63,6 @@
         </p>
     </footer>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
