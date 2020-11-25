@@ -4,64 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <ul id="menu">
-        <li>
-            <a href="./index.html">Home</a>
-        </li>
-        <li>
-            <a href="./contato.html">Contato</a>
-        </li>
-    </ul>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary font-weight-bold">
+        <a class="navbar-brand" href="./index.html">Hora de Aventura</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./contato.html">Contato</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Links
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.facebook.com/adventuretime" target="_blank">Facebook</a>
+                        <a class="dropdown-item" href="https://www.cartoonnetwork.com.br/show/hora-de-aventura" target="_blank">Cartoon</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/channel/UCFuU-5B1eKAWaTeLUu3JuyA" target="_blank">YouTube</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
     <div class="container">
-
-        <div>
-            <form action="" id="form-contato">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" onkeyup="validaNome()">
-                <div id="txtNome"></div>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" onkeyup="validaEmail()">
-                <div id="txtEmail"></div>
-
-                <label for="assunto">Assunto:</label>
-                <textarea name="assunto" id="assunto" cols="30" rows="15" onkeyup="validaAssunto()"></textarea>
-                <div id="txtAssunto"></div>
-
-                <button onclick="enviar()">Enviar</button>
-            </form>
-        </div>
-
-        <div class="mh-50">
-            <p>Igreja Católica no meio do nada</p>
-            <p>Fischenthal, Suiça</p>
         
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10813.804306990392!2d8.9292913!3d47.3445907!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa88d5d54eb3317e5!2sKatholische%20Kirche%20St.%20Gallus!5e0!3m2!1spt-BR!2sbr!4v1605897057951!5m2!1spt-BR!2sbr" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="mapa" onmousemove="mapaZoom()" onmouseout="mapaNormal()"></iframe>
+        <div class="row mt-5">
+            <div class="col-6 col-12-sm">
+                <form>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="exampleFormControlInput1">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="ex. Finn" onkeyup="validaNome()">
+                        <div class="alert mt-2" id="txtNome"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="exampleFormControlInput1">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="finnthehuman@ooo.com" onkeyup="validaEmail()">
+                        <div class="alert mt-2" id="txtEmail"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="exampleFormControlTextarea1">Assunto</label>
+                        <textarea class="form-control" id="assunto" rows="3" onkeyup="validaAssunto()"></textarea>
+                        <div class="alert mt-2" id="txtAssunto"></div>
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary mb-2" onclick="enviar()">Enviar</button>
+                </form>
+            </div>
+            <div class="col-6 col-12-sm">
+                <div class="mh-50">
+                    <p class="font-weight-bold">The land of Ooo</p>
+                    <p class="font-weight-bold">San Carlos, Costa Rica</p>
+                
+                    <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.8213611121914!2d-84.27083488571577!3d10.356164469643014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa089ef2746df79%3A0x6da7b6e7c3c3e895!2sLand%20Of%20Ooo!5e0!3m2!1spt-BR!2sbr!4v1606345757158!5m2!1spt-BR!2sbr" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="mapaZoom()" onmouseout="mapaNormal()"></iframe>
+                </div>
+            </div>
         </div>
+    
+        <hr>
+        <div class="row d-flex justify-content-center">
+            <footer>
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="https://www.youtube.com/channel/UCFuU-5B1eKAWaTeLUu3JuyA">
+                        <img class="tm-social" src="assets/imgs/youtube.png" alt="Ícone do YouTube">
+                    </a>
+                    <a href="https://www.cartoonnetwork.com.br/show/hora-de-aventura">
+                        <img class="tm-social" src="assets/imgs/cartoon-network.png" alt="Ícone do Cartoon Network">
+                    </a>
+                    <a href="https://www.facebook.com/adventuretime">
+                        <img class="tm-social" src="assets/imgs/facebook.png" alt="Ícone do Facebook">
+                    </a>
+                </div>
+
+                <p class="col-12 d-flex justify-content-center">
+                    Todos os direitos reservados: ricardito &copy;
+                </p>
+            </footer>
+        </div>
+        
     </div>
 
-    <hr>
-    <footer>
-        <div class="container">
-            <a href="https://www.youtube.com/channel/UCFuU-5B1eKAWaTeLUu3JuyA">
-                <img class="tm-social" src="assets/imgs/youtube.png" alt="Ícone do YouTube">
-            </a>
-            <a href="https://sci-hub.se/">
-                <img class="tm-social" src="assets/imgs/scihub.jpg" alt="Ícone do Sci-hub">
-            </a>
-            <a href="https://github.com/">
-                <img class="tm-social" src="assets/imgs/github.png" alt="Ícone do Github">
-            </a>
-        </div>
-
-        <p class="center">
-            Todos os direitos reservados: ricardito &copy;
-        </p>
-    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script src="assets/js/script.js"></script>
 </body>

@@ -1,14 +1,33 @@
+body {
+    background-color: #d6ff99;
+    color: #b36423;
+}
+
 /* Estilo da página index */
+
+header h1 {
+    font-size: 3.5em;
+    margin-top: 15vh;
+    color: #b36423;
+}
+
+footer {
+    color: #b36423;
+}
 
 .center {
     text-align: center;
 }
 
-.container {
+/* .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+} */
+
+.carousel-frame {
+    border-radius: 15%;
 }
 
 .dialog {
@@ -31,12 +50,12 @@
 }
 
 .br-5 {
-    border-radius: 5%;
+    border-radius: 2.5%;
 }
 
 .tm-social {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     padding: 20px;
 }
 
