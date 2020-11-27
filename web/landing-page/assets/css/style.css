@@ -1,0 +1,194 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Tillana', cursive;
+    font-weight: 700;
+    color: hsl(30, 75%, 25%);
+    padding-top: 4em;
+    background-image: url("../imgs/wallpaper2.png");
+    background-size: contain;
+}
+
+.my-10 {
+    margin: 7em 0;
+}
+
+nav {
+    background-color: hsl(17, 95%, 40%);
+}
+
+nav a {
+    color: rgb(68, 33, 55) !important;
+}
+
+.bg-light-brown {
+    background-color: rgb(225, 200, 160);
+    border-top-left-radius: 55%;
+    border-bottom-right-radius: 95%;
+}
+
+.frame-facade {
+    background-image: url("../imgs/facade-title.gif");
+    background-size: cover;
+}
+
+h2 {
+    background-color: hsl(17, 95%, 40%);
+    color: rgb(68, 33, 55);
+    border-radius: 20%;
+    border-top-right-radius: 80%;
+    padding-left: 15px;
+}
+
+h3 {
+    background-color: rgb(68, 33, 55);
+    color: hsl(17, 95%, 40%);
+    border-radius: 45%;
+    text-align: center;
+    width: 75%;
+    margin: 1.25em auto;
+}
+
+.about-us {
+    background-image: url("../imgs/old-letter.png");
+    background-size: 470px 710px;
+    background-repeat: no-repeat;
+    padding: 115px 105px 85px 45px;
+}
+
+.about-us p {
+    text-indent: 25px;
+}
+
+.frame-weasleys {
+    background-image: url("../imgs/weasleys-title.gif");
+    background-size: cover;
+}
+
+.frame-wizard {
+    background-image: url("../imgs/wizard-title.gif");
+    background-size: cover;
+}
+
+.frame-wheezes {
+    background-image: url("../imgs/wheezes-title.gif");
+    background-size: cover;
+}
+
+.cauldron-list li {
+    width: fit-content;
+    cursor: pointer;
+    transition: margin-left 0.25s ease, opacity 0.25s ease;
+}
+
+.cauldron-list li button {
+    background-color: rgb(68, 33, 55);
+    color: hsl(17, 95%, 40%);
+    border-radius: 50%;
+    margin: 0 1.5em;
+    font-size: 1.3em;
+    font-weight: 700;
+    width: 2em;
+    height: 2em;
+    transition: width 0.25s ease, height 0.25s ease;
+}
+
+.shopping-galery {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.card {
+    flex-shrink: 0;
+    width: 275px;
+    margin: 0 2em;
+    background-color: rgb(225, 200, 160);
+}
+
+.card-bg-img {
+    background-image: url("../imgs/card-bg.png");
+    background-size: cover;
+}
+
+.card-img-top {
+    width: 275px;
+    height: 275px;
+    margin: 0;
+    object-fit: contain;
+}
+
+.card-text {
+    width: 275px;
+    padding-right: 2em;
+    margin: 0;
+    font-weight: 500;
+}
+
+.letter {
+    background-image: url("../imgs/old-letter.png");
+    background-size: 470px 600px;
+    background-repeat: no-repeat;
+    padding: 115px 105px 85px 45px;
+}
+
+form {
+    padding-right: 50px;
+}
+
+form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px hsl(30, 75%, 25%) solid;
+}
+
+form textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px hsl(30, 75%, 25%) solid;
+}
+
+form button {
+    background-color: hsl(17, 95%, 40%);
+    color: rgb(68, 33, 55);
+}
+
+.frame-owl {
+    background-image: url("../imgs/owl-stand.gif");
+}
+
+.address {
+    background-color: rgb(68, 33, 55);
+    color: hsl(17, 95%, 40%);
+    border-top-left-radius: 65%;
+    border-bottom-right-radius: 65%;
+    width: fit-content;
+    padding: 0.75em;
+    margin: auto;
+}
+
+.map {
+    background-image: url("../imgs/location.jpg");
+    background-size: 735px 570px;
+    transition: background-size 2s ease-in-out, background-position 2s ease-in-out;
+    /* background-size: 1080px 850px;
+    background-position: 60% 60%; */
+}
+
+.firework {
+    bottom: 100px;
+    left: 320px;
+}
+
+footer img {
+    width: 75px;
+    height: 75px;
+}
+
+.bg-black {
+    background-color: black;
+    border-radius: 25%;
+    padding: 0.5em;
+    width: 95px;
+    height: 95px;
+}

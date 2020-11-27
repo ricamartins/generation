@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weasleys' Wizard Wheezes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="assets/imgs/weasleys-wizard-wheezes-logo.png" type="image/png" rel="icon">
+</head>
+<body>
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark font-weight-bold">
+        <a class="navbar-brand" href="./index.html">Weasleys' Wizard Wheezes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#who">Who</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#what">What</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#why">Wonderings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#where">Where</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <header>
+            <h1 class="text-center font-weight-bold bg-light-brown">Weasleys' Wizard Wheezes</h1>
+        </header>
+
+        <div class="row d-flex justify-content-center">
+            <div class="frame-facade">
+                <img class="d-block" width="660" height="495" src="assets/imgs/frame-horizontal.png" alt="Facade">
+            </div>
+        </div>
+
+        <p class="text-center text-uppercase mt-4 bg-light-brown">Why are you worrying about you-know-who? You should be worrying about u-no-poo!</p>
+
+        <section id="who" class="my-10 mt-5">
+            <h2>Who are we?</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="about-us">
+                        <p>
+                            Weasleys' Wizard Wheezes, also known as Weasley & Weasley, is a joke shop located at Number 93 Diagon Alley founded by Fred and George Weasley.
+                        </p>
+                        <p>
+                            The shop contains practical joke objects, such as Extendable Ears, a Reusable Hangman, Skiving Snackboxes, and Fred and George's special WonderWitch products,
+                            such as; Love Potions, Ten-Second Pimple Vanishers, and  Pygmy Puffs. This establishment started out as an 'owl-post service' led by
+                            the twins from the Burrow, and later continued from Hogwarts, selling joke-products until the store front was opened.
+                        </p>
+                        <p>
+                            The shop was the Weasley twins' dream. The seed money for the shop was Harry Potter's Triwizard Tournament 1,000 galleon winnings.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                    <div class="carousel slide" data-ride="carousel" data-interval="1800">
+                        <div class="carousel-inner carousel-frame">
+                            <div class="carousel-item active">
+                                <div class="frame-weasleys">
+                                    <img class="d-block" width="492" height="320" src="assets/imgs/frame-horizontal.png" alt="Weasleys'">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="frame-wizard">
+                                    <img class="d-block" width="492" height="320" src="assets/imgs/frame-horizontal.png" alt="Wizard">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="frame-wheezes">
+                                    <img class="d-block" width="492" height="320" src="assets/imgs/frame-horizontal.png" alt="Wheezes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="what" class="my-10">
+            <h2>What do we sell?</h2>
+            <h3>Drag the items you want and drop them in the cauldron</h3>
+            
+            <div class="row">
+                <div class="col-4">
+                    <img class="" src="assets/imgs/cauldron.png" width="300" height="300" alt="Cauldron" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="false">
+                    <ul class="cauldron-list p-0 d-flex flex-column"></ul>
+                </div>
+                <div class="col-8">
+                    <div class="shopping-galery d-flex">
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/basic-blaze-box.jpg" class="card-img-top" alt="Basic Blaze Box">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Basic Blaze Box</h5>
+                                <p class="card-text">
+                                    It contains an assortment of magical fireworks such as whizz-bangs and whammy rockets.
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/jinx-off-package.jpg" class="card-img-top" alt="Jinx Off Package">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Jinx Off Package</h5>
+                                <p class="card-text">
+                                    Jinx-Off is a spell-protection kit which includes a hat, cloak, and gloves.
+                                    It is advised that all three items should be worn together for "maximum protection,"
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/compendium-box-of-pyrotechtrix.png" class="card-img-top" alt="Compendium Box of Pyrotechtrix">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Compendium Box of Pyrotechtrix</h5>
+                                <p class="card-text">
+                                    This is a variety pack containing different rockets, explosives and fireworks from the Explosives Line.
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/dungbombs.jpg" class="card-img-top" alt="Basic Blaze Box">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dungbombs</h5>
+                                <p class="card-text">
+                                    A Dungbomb is a magical stink bomb that gives off a putrid odour.
+                                    Dungbombs were invented in the 1800s by Alberic Grunnion. When handled,
+                                    Dungbombs leave a person's hands dirty.
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/electric-shock-shake-box.jpg" class="card-img-top" alt="Electric Shock Shake Box">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Electric Shock Shake Box</h5>
+                                <p class="card-text">
+                                    A glove that was bewitched so when the wearer touches a person, it sends an electric shock on them.
+                                    Warning: this product is not safe for use by pregnant witches.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/skiving-snackbox.jpg" class="card-img-top" alt="Skiving Snackbox">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Skiving Snackbox</h5>
+                                <p class="card-text">
+                                    A range of sweets that make the consumer appear ill.
+                                    The user develops various symptoms depending on the type of snackbox eaten.
+                                    No more undesirable lessons.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/u-no-poo.jpg" class="card-img-top" alt="U-no-poo">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">U-no-poo</h5>
+                                <p class="card-text">
+                                    These pills cause constipation in the unknowing taker.
+                                    The pills can be mashed up and mixed with food or drink.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/bombtastic-bomb.jpg" class="card-img-top" alt="Bombastic Bomb">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Bombastic Bomb</h5>
+                                <p class="card-text">
+                                    Bombard your friends with the most bombastic bomb you will ever bomb.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/weatherina-bottle.jpg" class="card-img-top" alt="Weather in a Bottle">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Weather in a Bottle</h5>
+                                <p class="card-text">
+                                    It holds wind or water or some kind of weather that
+                                    when unleashed affects a small area around the bottle.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card" ondragstart="drag(event)" draggable="true">
+                            <div class="card-bg-img">
+                                <img src="assets/imgs/whiz-bangs.jpg" class="card-img-top" alt="Weasleys' Wildfire Whiz-bangs">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Weasleys' Wildfire Whiz-bangs</h5>
+                                <p class="card-text">
+                                    They are unstoppable fireworks that are charmed to explode when struck with the Stunning Spell,
+                                    and to multiply by ten when hit with the Vanishing Spell.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+
+        <section id="why" class="my-10">
+            <h2>Wonderings? Send us an owl</h2>
+
+            <div class="row">
+                <div class="col-6 letter">
+                    <form class="d-flex flex-column">
+                        <label class="font-weight-bold" for="name">Name</label>
+                        <input type="text" id="name" placeholder="ex. Gina Weasley">
+                        <div class="alert mt-2" id="alertName"></div>
+                        
+                        <label class="font-weight-bold" for="email">Email</label>
+                        <input type="email" id="email" placeholder="ginny_weasley@hogwarts.com">
+                        <div class="alert mt-2" id="alertEmail"></div>
+                        
+                        
+                        <label class="font-weight-bold" for="wondering">Wonderings</label>
+                        <textarea id="wondering" rows="1"></textarea>
+                        <div class="alert mt-2" id="alertWondering"></div>
+            
+                        <button type="submit" class="btn mb-2 font-weight-bold" id="sumbit-button" onclick="enviar(event)">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-6 d-flex align-items-center">
+                    <div class="frame-owl">
+                        <img class="d-block" width="450" height="480" src="assets/imgs/frame-vertical.png" alt="Facade">
+                    </div>
+                </div>
+            </div>
+                        
+        </section>
+        
+        <section id="where" class="my-10 mb-5">
+            <h2 class="mb-2">Where can you find us?</h2>
+            <h3>Number 93, Diagon Alley</h3>
+            <div class="row d-flex justify-content-center">
+                <div class="map">
+                    <img class="d-block" width="735" height="570" src="assets/imgs/frame-horizontal.png" alt="Facade">
+                    <div class="position-relative">
+                        <img class="position-absolute firework" src="assets/imgs/brown-firework.gif" width="250" height="250">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="row d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="https://www.youtube.com/c/WizardingWorld" target="_black">
+                    <img class="tm-social mx-3 mb-2" src="assets/imgs/youtube.png" alt="YouTube icon">
+                </a>
+                <a href="https://www.wizardingworld.com/" target="_black">
+                    <img class="tm-social mx-3 mb-2 bg-black" src="assets/imgs/wizarding-world.png" alt="Warner Bros icon">
+                </a>
+                <a href="https://www.facebook.com/harrypottermovie" target="_black">
+                    <img class="tm-social mx-3 mb-2" src="assets/imgs/facebook.png" alt="Facebook icon">
+                </a>
+            </div>
+
+            <p class="col-12 d-flex justify-content-center bg-light-brown">
+                All rights reserved: Weasleys Wizard Wheezes &copy;
+            </p>
+        </footer>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="assets/js/spells.js"></script>
+</body>
+</html>
