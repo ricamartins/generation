@@ -8,11 +8,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" href="#">Feed</a>
+                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/feed">Feed</a>
                 </li>
+                <div *ngIf="authService.btnLogin()">
+                    <li class="nav-item">
+                        <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/login">Login</a>
+                    </li>
+                </div>
+                <div *ngIf="authService.btnLogin()">
+                    <li class="nav-item">
+                        <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/cadastro">Cadastro</a>
+                    </li>
+                </div>
+                <div *ngIf="authService.btnSair()">
+                    <li class="nav-item">
+                        <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)="sair()">Sair</a>
+                    </li>
+                </div>
             </ul>
         </div>
     </nav>
